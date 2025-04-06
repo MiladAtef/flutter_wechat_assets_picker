@@ -1257,3 +1257,103 @@ class TraditionalChineseAssetPickerTextDelegate
   @override
   String get sUnitAssetCountLabel => '數量';
 }
+
+/// [AssetPickerTextDelegate] implements with Persian.
+/// Persian (Farsi) Localization
+class PersianAssetPickerTextDelegate extends AssetPickerTextDelegate {
+  const PersianAssetPickerTextDelegate();
+
+  @override
+  String get languageCode => 'fa';
+
+  @override
+  String get confirm => 'تأیید';
+
+  @override
+  String get cancel => 'انصراف';
+
+  @override
+  String get edit => 'ویرایش';
+
+  @override
+  String get gifIndicator => 'گیف';
+
+  @override
+  String get livePhotoIndicator => 'زنده';
+
+  @override
+  String get loadFailed => 'بارگذاری ناموفق بود';
+
+  @override
+  String get original => 'اصلی';
+
+  @override
+  String get preview => 'پیش‌نمایش';
+
+  @override
+  String get select => 'انتخاب';
+
+  @override
+  String get emptyList => 'لیست خالی است';
+
+  @override
+  String get unSupportedAssetType => 'نوع فایل HEIC پشتیبانی نمی‌شود.';
+
+  @override
+  String get unableToAccessAll => 'دسترسی کامل به فایل‌ها امکان‌پذیر نیست';
+
+  @override
+  String get viewingLimitedAssetsTip =>
+      'فقط فایل‌ها و آلبوم‌های قابل‌دسترسی توسط برنامه نمایش داده می‌شوند.';
+
+  @override
+  String get changeAccessibleLimitedAssets =>
+      'برای به‌روزرسانی فایل‌های قابل‌دسترسی کلیک کنید';
+
+  @override
+  String get accessAllTip =>
+      'برنامه فقط به بخشی از فایل‌های دستگاه دسترسی دارد. '
+          'برای دسترسی کامل، به تنظیمات سیستم بروید و اجازه دسترسی کامل بدهید.';
+
+  @override
+  String get goToSystemSettings => 'رفتن به تنظیمات سیستم';
+
+  @override
+  String get accessLimitedAssets => 'ادامه با دسترسی محدود';
+
+  @override
+  String get accessiblePathName => 'فایل‌های قابل‌دسترسی';
+
+  @override
+  String get sTypeAudioLabel => 'صدا';
+
+  @override
+  String get sTypeImageLabel => 'تصویر';
+
+  @override
+  String get sTypeVideoLabel => 'ویدیو';
+
+  @override
+  String get sTypeOtherLabel => 'فایل دیگر';
+
+  @override
+  String get sActionPlayHint => 'پخش';
+
+  @override
+  String get sActionPreviewHint => 'پیش‌نمایش';
+
+  @override
+  String get sActionSelectHint => 'انتخاب';
+
+  @override
+  String get sActionSwitchPathLabel => 'تغییر مسیر';
+
+  @override
+  String get sActionUseCameraHint => 'استفاده از دوربین';
+
+  @override
+  String get sNameDurationLabel => 'مدت زمان';
+
+  @override
+  String get sUnitAssetCountLabel => 'تعداد';
+}
