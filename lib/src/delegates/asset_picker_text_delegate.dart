@@ -1258,8 +1258,8 @@ class TraditionalChineseAssetPickerTextDelegate
   String get sUnitAssetCountLabel => '數量';
 }
 
-/// [AssetPickerTextDelegate] implements with Persian.
-/// Persian (Farsi) Localization
+/// [AssetPickerTextDelegate] implements with Persian (Farsi).
+/// فارسی (ایرانی) محلی‌سازی
 class PersianAssetPickerTextDelegate extends AssetPickerTextDelegate {
   const PersianAssetPickerTextDelegate();
 
@@ -1270,22 +1270,19 @@ class PersianAssetPickerTextDelegate extends AssetPickerTextDelegate {
   String get confirm => 'تأیید';
 
   @override
-  String get cancel => 'انصراف';
+  String get cancel => 'لغو';
 
   @override
   String get edit => 'ویرایش';
 
   @override
-  String get gifIndicator => 'گیف';
+  String get gifIndicator => 'GIF';
 
   @override
-  String get livePhotoIndicator => 'زنده';
+  String get loadFailed => 'بارگذاری ناموفق';
 
   @override
-  String get loadFailed => 'بارگذاری ناموفق بود';
-
-  @override
-  String get original => 'اصلی';
+  String get original => 'اصل';
 
   @override
   String get preview => 'پیش‌نمایش';
@@ -1294,38 +1291,35 @@ class PersianAssetPickerTextDelegate extends AssetPickerTextDelegate {
   String get select => 'انتخاب';
 
   @override
-  String get emptyList => 'لیست خالی است';
+  String get emptyList => 'لیست خالی';
 
   @override
-  String get unSupportedAssetType => 'نوع فایل HEIC پشتیبانی نمی‌شود.';
+  String get unSupportedAssetType => 'نوع رسانه HEIC پشتیبانی نمی‌شود.';
 
   @override
-  String get unableToAccessAll => 'دسترسی کامل به فایل‌ها امکان‌پذیر نیست';
+  String get unableToAccessAll => 'دسترسی به همه رسانه‌های دستگاه ممکن نیست.';
 
   @override
-  String get viewingLimitedAssetsTip =>
-      'فقط فایل‌ها و آلبوم‌های قابل‌دسترسی توسط برنامه نمایش داده می‌شوند.';
+  String get viewingLimitedAssetsTip => 'فقط رسانه‌ها و آلبوم‌های قابل دسترسی را می‌توانید ببینید.';
 
   @override
-  String get changeAccessibleLimitedAssets =>
-      'برای به‌روزرسانی فایل‌های قابل‌دسترسی کلیک کنید';
+  String get changeAccessibleLimitedAssets => 'برای به‌روزرسانی رسانه‌های قابل دسترسی کلیک کنید.';
 
   @override
-  String get accessAllTip =>
-      'برنامه فقط به بخشی از فایل‌های دستگاه دسترسی دارد. '
-          'برای دسترسی کامل، به تنظیمات سیستم بروید و اجازه دسترسی کامل بدهید.';
+  String get accessAllTip => 'برنامه فقط به بخشی از رسانه‌های دستگاه دسترسی دارد. '
+      'به تنظیمات سیستم بروید و اجازه دسترسی برنامه به همه رسانه‌های دستگاه را بدهید.';
 
   @override
-  String get goToSystemSettings => 'رفتن به تنظیمات سیستم';
+  String get goToSystemSettings => 'برو به تنظیمات سیستم';
 
   @override
   String get accessLimitedAssets => 'ادامه با دسترسی محدود';
 
   @override
-  String get accessiblePathName => 'فایل‌های قابل‌دسترسی';
+  String get accessiblePathName => 'رسانه‌های قابل دسترسی';
 
   @override
-  String get sTypeAudioLabel => 'صدا';
+  String get sTypeAudioLabel => 'صوتی';
 
   @override
   String get sTypeImageLabel => 'تصویر';
@@ -1334,7 +1328,7 @@ class PersianAssetPickerTextDelegate extends AssetPickerTextDelegate {
   String get sTypeVideoLabel => 'ویدیو';
 
   @override
-  String get sTypeOtherLabel => 'فایل دیگر';
+  String get sTypeOtherLabel => 'سایر رسانه‌ها';
 
   @override
   String get sActionPlayHint => 'پخش';
@@ -1352,8 +1346,18 @@ class PersianAssetPickerTextDelegate extends AssetPickerTextDelegate {
   String get sActionUseCameraHint => 'استفاده از دوربین';
 
   @override
-  String get sNameDurationLabel => 'مدت زمان';
+  String get sNameDurationLabel => 'مدت';
 
   @override
-  String get sUnitAssetCountLabel => 'تعداد';
+  String get sUnitAssetCountLabel => 'عدد';
+
+
+  @override
+  AssetPickerTextDelegate get semanticsTextDelegate {
+    if (Platform.isAndroid) {
+      return const EnglishAssetPickerTextDelegate();
+    }
+    return this;
+  }
+
 }
