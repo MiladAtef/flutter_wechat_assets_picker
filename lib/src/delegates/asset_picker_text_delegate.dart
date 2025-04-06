@@ -22,6 +22,7 @@ const assetPickerTextDelegates = <AssetPickerTextDelegate>[
   TraditionalChineseAssetPickerTextDelegate(),
   TurkishAssetPickerTextDelegate(),
   VietnameseAssetPickerTextDelegate(),
+  PersianAssetPickerTextDelegate(),
 ];
 
 /// Obtain the text delegate from the given locale.
